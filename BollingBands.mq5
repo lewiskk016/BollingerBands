@@ -80,3 +80,15 @@ void PlotBB()
     ArrayResize(upperBand, Bars);
     ArrayResize(middleBand, Bars);
     ArrayResize(lowerBand, Bars);
+
+for (int i = 0; i < Bars; i++)
+    {
+        upperBand[i] = iMA(NULL, 0, BBPeriod, 0, MODE_SMA, PRICE_CLOSE, i) + BBDeviation * iStdDev(NULL, 0, BBPeriod, 0, MODE_SMA, PRICE_CLOSE, i);
+        middleBand[i] = iMA(NULL, 0, BBPeriod, 0, MODE_SMA, PRICE_CLOSE, i);
+        lowerBand[i] = iMA(NULL, 0, BBPeriod, 0, MODE_SMA, PRICE_CLOSE, i) - BBDeviation * iStdDev(NULL, 0, BBPeriod, 0, MODE_SMA, PRICE_CLOSE, i);
+    }
+
+    // Plot Bollinger Bands on chart
+    PlotIndexSetDouble(0, PLOT_EMPTY, lowerBand);
+    PlotIndexSetInteger(0, PLOT_DRAW_TYPE, DRAW_LINE);
+    PlotIndexSetInteger(0, PLOT_LINE_COLOR, clrBlue);
