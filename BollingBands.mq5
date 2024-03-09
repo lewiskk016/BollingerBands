@@ -92,3 +92,11 @@ for (int i = 0; i < Bars; i++)
     PlotIndexSetDouble(0, PLOT_EMPTY, lowerBand);
     PlotIndexSetInteger(0, PLOT_DRAW_TYPE, DRAW_LINE);
     PlotIndexSetInteger(0, PLOT_LINE_COLOR, clrBlue);
+
+    PlotIndexSetDouble(1, PLOT_EMPTY, middleBand);
+    PlotIndexSetInteger(1, PLOT_DRAW_TYPE, DRAW_LINE);
+    PlotIndexSetInteger(1, PLOT_LINE_COLOR, clrGreen);
+
+    PlotIndexSetDouble(2, PLOT_EMPTY, upperBand);
+    PlotIndexSetInteger(2, PLOT_DRAW_TYPE, DRAW_LINE);
+    PlotIndexSetInteger(2, PLOT_LINE_COLOR, clrRed);
