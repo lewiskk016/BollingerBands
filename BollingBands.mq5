@@ -54,3 +54,17 @@ bool Inputs()
         return false;
     }
 }
+
+//+------------------------------------------------------------------+
+//| Chart event function                                            |
+//+------------------------------------------------------------------+
+void OnChartEvent(const int id, const long& lparam, const double& dparam, const string& sparam)
+{
+    // Plot Bollinger Bands on chart
+    if (id == CHARTEVENT_OBJECT_CREATE && StringFind(sparam, "Bollinger Bands", 0) != -1)
+    {
+        PlotBB();
+    }
+}
+
+
