@@ -67,4 +67,16 @@ void OnChartEvent(const int id, const long& lparam, const double& dparam, const 
     }
 }
 
+//+------------------------------------------------------------------+
+//| Plot Bollinger Bands on chart                                   |
+//+------------------------------------------------------------------+
+void PlotBB()
+{
+    double upperBand[];
+    double middleBand[];
+    double lowerBand[];
 
+    // Calculate Bollinger Bands values
+    ArrayResize(upperBand, Bars);
+    ArrayResize(middleBand, Bars);
+    ArrayResize(lowerBand, Bars);
