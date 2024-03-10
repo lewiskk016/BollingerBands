@@ -100,3 +100,11 @@ for (int i = 0; i < Bars; i++)
     PlotIndexSetDouble(2, PLOT_EMPTY, upperBand);
     PlotIndexSetInteger(2, PLOT_DRAW_TYPE, DRAW_LINE);
     PlotIndexSetInteger(2, PLOT_LINE_COLOR, clrRed);
+
+   ObjectCreate(0, "Bollinger Bands", OBJ_LABEL, 0, 0, 0);
+    ObjectSetInteger(0, "Bollinger Bands", OBJPROP_COLOR, clrBlack);
+    ObjectSetString(0, "Bollinger Bands", OBJPROP_TEXT, "Bollinger Bands");
+    ObjectSetInteger(0, "Bollinger Bands", OBJPROP_CORNER, 0);
+    ObjectSetInteger(0, "Bollinger Bands", OBJPROP_XDISTANCE, 20);
+    ObjectSetInteger(0, "Bollinger Bands", OBJPROP_YDISTANCE, 20);
+}
